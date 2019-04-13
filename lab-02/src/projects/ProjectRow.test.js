@@ -8,7 +8,7 @@ describe('<ProjectRow />', () => {
 
   beforeEach(() => {
     const project = {
-      name: 'NAME',
+      name: 'Bobby Joe',
       description: 'DESCRIPTION'
     }
     wrapper = shallow(<ProjectRow project={project} />)
@@ -22,5 +22,9 @@ describe('<ProjectRow />', () => {
     expect(wrapper.find('td')).toHaveLength(2)
     expect(wrapper.find('td').at(0).text()).toEqual('NAME')
     expect(wrapper.find('td').at(1).text()).toEqual('DESCRIPTION')
+  })
+
+  it('should render to match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
   })
 })
