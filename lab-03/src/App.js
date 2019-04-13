@@ -11,8 +11,8 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className='App'>
+          <Navigation />
           <div className='container'>
-            <Navigation />
             <Switch>
               <Route path='/projects' component={Projects} />
               <Route path='/employees' component={Employees} />
